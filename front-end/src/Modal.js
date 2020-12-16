@@ -26,7 +26,6 @@ export default class Modals extends React.Component{
         }
         Data.Issues.push(data)
         Data.Cards[this.props.cardId-1].issuesId.push(data.issue_id)
-        
     }
     render(){
         console.log(Data.Issues)
