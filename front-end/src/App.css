@@ -8,24 +8,159 @@
 #container-kanban{
   margin:0;
 }
+#kanban-project{
+  margin-top: 1.5rem;
+  margin-bottom: 4.5rem;
+}
+#logoprosa{
+  width: 70px;
+  height: 70px;
+}
+
+#kanban-members{
+  margin-top: 1.5rem;
+  text-align: end;
+  padding-right: 3.4rem;
+}
+#user-pic-board{
+  width:32px;
+  height:32px;
+  border-radius: 50px;
+  margin-right: 0.3rem;
+}
+#team-members-board{
+  background-color: #EAEAEA;
+  color: #000000;
+  padding: 5px 18px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: 0.8rem;
+}
+#board-name{
+  position:relative;
+  top:10px;
+  margin-left: 1rem;
+  font-weight: 800;
+  font-size: 30px;
+  color: #000000;
+}
+#container-column{
+  border-radius: 0.5rem;
+  box-shadow: 0px 6px 8px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+  min-height: 100%;
+  height: 100%;
+  padding: 20px 26px;
+}
+#column-header{
+  padding-bottom: 2rem;
+}
+#column-name{
+  font-weight: 700;
+  font-size: 30px;
+  color: #000000;
+  text-transform:capitalize;
+}
+#col-add-task-button{
+  text-align: right;
+}
 #add-task-button{
   background-color: #76CBB7;
   color: white;
   border-radius: 1.5rem;
   border-color: #76CBB7;
   font-weight: 700;
-}
-
-.container-column{
-  border-radius: 0.5rem;
-  box-shadow: 0px 6px 8px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
-  min-height: 100%;
-  height: 100%;
+  font-size: 14px;
+  padding: 10px 20px;
 }
 
 #container-card-column{
-  background-color: antiquewhite;
+  background-color:#F7F6F3;
   border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   margin-top: 0.5rem;
+  padding:1rem;
+  padding-left: 25px;
+  font-family: 'Arial';
+}
+#card-task{
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: black;
+}
+#col-card-assignee{
+  margin-right: 0.4rem;
+}
+#card-assignee{
+  font-size: 15px;
+  border-radius: 15px;
+  padding: 4px 8px;
+  border: 2.5px solid white;
+  background-color: #DEF9F3;
+}
+.card-tag{
+  position:relative;
+  top:2px;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 1px;
+  border-radius: 15px;
+  padding: 3px 10px;
+  padding-top:5px;
+}
+.research{
+  background-color: #FFF3D2;
+  color:#EEB600;
+}
+.backend{
+ background-color: #FFE5F0;
+ color: #EF3498;
+}
+.design{
+  background-color: #E3EFFF;
+  color:#237BD2;
+}
+#card-deadline{
+  color: #9E9E9E;
+  font-weight: 800;
+  align-items: flex-end;
+}
+
+#modal-task{
+  width:25%;
+  top: 14%;
+}
+#modal-body{
+  padding:20px 40px;
+}
+#modal-title{
+  font-weight: 700;
+  font-size: 30px;
+}
+.label-form-modal{
+  font-weight: 700;
+  font-size:16px;
+  margin-bottom: 0.5rem;
+  margin-top:1.5rem;
+}
+
+#form-input-modal{
+  border-color: #76CBB7;
+  border-radius: 10px;
+  height: 40px;
+}
+#add-task-button-modal{
+  background-color: #76CBB7;
+  color: white;
+  border-radius: 0.5rem;
+  border-color: #76CBB7;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 20px;
+  width: 150px;
+  margin-top: 1.5rem;
+  margin-left: 20%;
+  margin-right: 20%;
 }
