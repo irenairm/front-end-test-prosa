@@ -5,7 +5,7 @@ import logoprosa from './icon/prosa.png'
 import user1 from './icon/user1.jpg'
 import user2 from './icon/user2.jpg'
 import user3 from './icon/user3.jpg'
-import {Data} from './Data.js'
+
 
 export default class Kanban extends React.Component{
     constructor(){
@@ -14,6 +14,8 @@ export default class Kanban extends React.Component{
             showModalBacklog:false,
             showModalToDo:false,
             showModalDone:false,
+            data:JSON.parse(localStorage.getItem("Cards")),
+            issues:JSON.parse(localStorage.getItem("Issues"))
         }
     }
     onClickCard(title){
@@ -37,8 +39,11 @@ export default class Kanban extends React.Component{
         else{
             this.setState({showModalDone:!this.state.showModalDone});
         }
+        window.location.reload()
     }
     render(){
+        console.log(JSON.parse(localStorage.getItem("Issues")))
+        console.log(JSON.parse(localStorage.getItem("Cards")))
         return(
             <Container id="container-kanban">
                 <Row id="kanban-project">
@@ -58,13 +63,12 @@ export default class Kanban extends React.Component{
                 </Row>
                 <Row>
                     {
-                    Data.Cards.map(data=> {
+                    this.state.data.map(data=> {
                         return (
                             <Col>
                                 <Column name={data.title} 
                                 onClickAdd={()=>this.onClickCard(data.title)} 
                                 show={data.title==='backlog'?this.state.showModalBacklog:(data.title==='todo'?this.state.showModalToDo:this.state.showModalDone)} 
-                                hide={()=>this.onClickCard(data.title)} 
                                 addTask={()=>this.addTask(data.title)}
                                 cardId = {data.card_id} 
                                 issue={data.issuesId}

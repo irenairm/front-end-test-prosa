@@ -1,9 +1,17 @@
 import React from 'react'
 import {Container, Button, Row, Col} from 'react-bootstrap'
 import Modals from './Modal.js'
-import {Data} from './Data.js' 
 
 class Card extends React.Component{
+    constructor(){
+        super()
+        this.state ={
+            issues: [],
+        }
+    }
+    componentDidMount(){
+        this.setState({issues:JSON.parse(localStorage.getItem("Issues"))})
+    }
     getInitials(name){
         return name.split(" ")[0].charAt(0)
     }
@@ -12,7 +20,7 @@ class Card extends React.Component{
     }
     render(){
         return(
-            Data.Issues.map((data,key)=>{
+            this.state.issues.map((data,key)=>{
             var i;
             for (i=0; i<this.props.issue.length; i++){
                 if (data.issue_id===this.props.issue[i]) {
